@@ -1,1 +1,9 @@
 <h1>Hello</h1>
+<%= link_to 'Create Listing', new_listing_path %>
+<% @listings.each do |listing|%>
+    <p><%= listing.title %></p>
+    <% if current_user.id == listing.user_id %>
+        <p><%= link_to 'View Post', listing_path(listing) %></p>
+        <p><%= link_to 'Delete Post', listing, method: :delete, data: {confirm: "Are you sure?"} %></p>
+    <% end %>
+<% end %>

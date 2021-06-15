@@ -5,3 +5,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+#Listing.destroy_all
+#Listing.create(name: 'Carrots For Sale', description: 'test test', qty: 10, price: 3, user_id: User.first.id)
