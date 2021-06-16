@@ -1,4 +1,4 @@
 <h1><%= @listing.title %></h1>
-<p><%= image_tag @listing.image, width: 120, height: 120%></p>
+<p><%= cl_image_tag @listing.image.key, crop: :scale, width: 120, height: 120%></p>
 
 <p><%= link_to '<<Back', :back %></p>
