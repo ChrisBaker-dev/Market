@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
   ## Authenticate user before any action
   before_action :authenticate_user!
-  before_action :get_listing, only: [:update, :show, :destroy, :edit]
+  before_action :get_listing, only: [:update, :show, :destroy, :edit, :buy]
   # before_action :check_auth
 
   def index
@@ -25,6 +25,7 @@ class ListingsController < ApplicationController
   def edit; end
 
   def show
+
   end
 
   def create
@@ -44,6 +45,16 @@ class ListingsController < ApplicationController
     @listing.destroy
     redirect_to listings_path
   end
+
+  def buy
+    @listing.decrement(:qty, 1)
+    @listing.save!
+    Order.create(current_user.id, @listing.id).save
+
+
+    redirect_to listings_path
+  end
+
 
   private
 

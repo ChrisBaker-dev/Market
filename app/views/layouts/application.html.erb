@@ -11,7 +11,9 @@
   </head>
 
   <body>
-  <nav>
+  <header class='main'>
+      <h1>Farmers Marketplace</h1>
+      <nav>
         <%= link_to 'Home', listings_path %>
         
         <span>
@@ -26,7 +28,7 @@
         <% end %>
         </span>
       </nav>
-    </header>
+  </header>
     <% if notice %>
       <p class="notice"><%= notice %></p>
     <% end %>

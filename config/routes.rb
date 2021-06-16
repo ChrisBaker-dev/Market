@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root to: 'listings#index'
 
   resources :listings
+
+  patch '/listings/:id/buy', to: 'listings#buy', as: 'buy'
 end

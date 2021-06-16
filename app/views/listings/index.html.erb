@@ -3,7 +3,12 @@
 <% @listings.each do |listing|%>
     <p><%= listing.title %></p>
     <% if current_user.id == listing.user_id %>
+    <div class='listing'>
+        <p class='listing-img'><%= cl_image_tag listing.image.key, crop: :scale, width: 120, height: 120%></p>
+        <p><%= listing.description %></p>
+        <p><%= listing.qty %></p>
         <p><%= link_to 'View Post', listing_path(listing) %></p>
         <p><%= link_to 'Delete Post', listing, method: :delete, data: {confirm: "Are you sure?"} %></p>
+    </div>
     <% end %>
 <% end %>
