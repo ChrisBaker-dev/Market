@@ -1,4 +1,13 @@
-<h1><%= @listing.title %></h1>
-<p><%= cl_image_tag @listing.image.key, crop: :scale, width: 120, height: 120%></p>
-<p><%= link_to 'Buy Now', buy_path, method: 'PATCH'%></p>
-<p><%= link_to '<<Back', :back %></p>
+<div class='view-listing'>
+    <h1><%= @listing.title %></h1>
+    <p class='show-img'><%= cl_image_tag @listing.image.key, crop: :scale, width: 300, height: 300%></p>
+    <div class='show-price-stock'>
+        <p>Price: $<%= @listing.price%></p>
+        <p class='show-qty'>Available Stock: <%= @listing.qty %></p>
+    </div>
+    <p class='desc'><%= @listing.description %></p>
+    <div class='links'>
+        <p><%= link_to '<<Back', :back %></p>
+        <p><%= link_to 'Buy Now', buy_path, method: 'PATCH'%></p>
+    </div>
+</div>

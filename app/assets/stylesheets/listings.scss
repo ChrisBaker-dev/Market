@@ -10,11 +10,95 @@
     background-color: green;
 }
 
+.create-listing {
+    right: 25px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .listing {
     width: 250px;
-    height: 250px;
+    height: 350px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 2px grey;
+    justify-content: space-between;
+
+    .top-listing {
+        display: flex;
+        flex-direction: row;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: space-between;
+    }
+
+    .listing-img {
+        align-self: center;
+        margin-bottom: 2px;;
+    }
+
+    .qty {
+        font-style: italic;
+        margin-top: 2px;
+        margin-right: 5px;
+        align-self: flex-end;
+    }
+
+    .description {
+        margin: 5px;
+    }
+    .listing-options {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 5px;
+        margin-right: 5px;
+
+    }
+}
+
+.view-listing {
+    width: 400px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin: auto;
+
+    h1 {
+        align-self: center;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .show-img {
+        align-self: center;
+    }
+
+    .desc {
+        align-self: center;
+    }
+
+    .show-price-stock {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .show-qty {
+            font-style: italic;
+            align-self: none;
+        }
+    }
+
 }
