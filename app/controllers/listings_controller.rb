@@ -5,8 +5,9 @@ class ListingsController < ApplicationController
   # before_action :check_auth
 
   def index
+    # Grab all listings that dont belong to the current user and 
+    # are still active - qty is greater than 0
     @listings = Listing.where("qty != 0 AND user_id != #{current_user.id}")
-    # @produce = Produce.all
   end
 
   def new
@@ -42,6 +43,8 @@ class ListingsController < ApplicationController
   end
 
   def destroy
+    # Set listing quantity to 0 when deleting - if destroy then
+    # there will be referential integrity issue on orders
     @listing.qty = 0
     @listing.save
     redirect_to listings_path
@@ -57,10 +60,13 @@ class ListingsController < ApplicationController
   end
 
   def orders
+    # Get all orders belonging to current user
     @orders = Order.where(user_id: current_user.id)
   end
 
   def posts
+    # Grab all listings that belong to the current user and
+    # are still active - qty is greater than 0
     @listings = Listing.where("qty != 0 AND user_id = #{current_user.id}")
   end
 

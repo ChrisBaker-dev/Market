@@ -120,6 +120,8 @@ Source Control - GitHub
 ---
 # R14 - ERD
 
+![erd](/src/erd.png)
+
 
 ---
 # R15 Explain the different high-level components (abstractions) in your app
@@ -182,7 +184,7 @@ A isting contains all the information about a product being listed on a website.
 
 Listing:
 
-    - has_one and only one user
+    - belongs_to user
     - has_many orders
 
 ### User
@@ -194,8 +196,8 @@ The user model contains information based on the individual creating interaction
 ### Order
 The order model ontains all purchases made by a user within the web application. Each order can only belong to one user and one listing, using both of their respective model id's. An Order:
 
-    - has_one and only one listing_id
-    - has_one and only one user_id
+    - belongs_to user
+    - belongs_to listing
 
 ---
 # R18 - Discuss the database relations to be implemented in your application
@@ -203,6 +205,13 @@ The order model ontains all purchases made by a user within the web application.
 The Farmers Marketplace application is using a relational database which can be shown using the ERD in R14. Each table within the application has uniquely identifiable key columns which allow for referencing data across various tables, as well as breaking up the whole of the data into smaller tables for easier management.
 
 This can be shown by looking at the ERD from R14 in which the listings model obtains a foreign key from the user model in order to associate the listing with a user, but the listing model does not contain the user model information such as email and password. 
+
+## Relations
+
+    - 1 listing has many orders (1:m)
+    - 1 user has many listings (1:m)
+    - 1 user has many orders (1:m)
+
 
 ---
 # R19 - Provide your database schema design
