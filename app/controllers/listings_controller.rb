@@ -5,7 +5,7 @@ class ListingsController < ApplicationController
   # before_action :check_auth
 
   def index
-    @listings = Listing.all
+    @listings = Listing.where("qty != 0 AND user_id != #{current_user.id}")
     # @produce = Produce.all
   end
 
@@ -33,7 +33,7 @@ class ListingsController < ApplicationController
     @listing.user_id = current_user.id
 
     if @listing.save
-        redirect_to @listing
+        redirect_to listing_path(@listing)
     else
         flash.now[:alert] = @listing.errors.full_messages
         render 'new'
@@ -42,17 +42,26 @@ class ListingsController < ApplicationController
   end
 
   def destroy
-    @listing.destroy
+    @listing.qty = 0
+    @listing.save
     redirect_to listings_path
   end
 
   def buy
     @listing.decrement(:qty, 1)
     @listing.save!
-    Order.create(current_user.id, @listing.id).save
+    Order.create(user_id: current_user.id, listing_id: @listing.id).save
 
 
     redirect_to listings_path
+  end
+
+  def orders
+    @orders = Order.where(user_id: current_user.id)
+  end
+
+  def posts
+    @listings = Listing.where("qty != 0 AND user_id = #{current_user.id}")
   end
 
 

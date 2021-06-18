@@ -5,5 +5,7 @@ Rails.application.routes.draw do
 
   resources :listings
 
+  get '/users/posts', to: 'listings#posts', as: 'posts'
+  get '/users/orders', to: 'listings#orders', as: 'orders'
   patch '/listings/:id/buy', to: 'listings#buy', as: 'buy'
 end

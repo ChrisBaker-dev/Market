@@ -1,18 +1,15 @@
-<p class='create-listing'></p><%= link_to 'Create Listing', new_listing_path %></p>
-<p><%= link_to 'View Orders', orders_path %></p>
-<p><%= link_to 'Edit Listings', posts_path %></p>
+
 <div class='layout'>
-    <% @listings.each do |listing|%>
-        <% if current_user.id != listing.user_id %>
-        <div class='listing'>
+<p><% @listings.each do |listing| %></p>
+    <div class='listing'>
             <div class='top-listing'><p><%= listing.title %></p><p><%= listing.price%></p></div>
                 <p class='listing-img'><%= cl_image_tag listing.image.key, crop: :scale, width: 200, height: 120%></p>
                 <p class='qty'>Available Stock: <%= listing.qty %></p>
                 <p class='description'><%= listing.description %></p>
                 <div class='listing-options'>
                     <p><%= link_to 'View Post', listing_path(listing) %></p>
+                    <p><%= link_to 'Delete Post', listing, method: :delete, data: {confirm: "Are you sure?"} %></p>
             </div>
         </div>
-    <% end %>
 <% end %>
 </div>
