@@ -28,6 +28,7 @@
     flex-direction: column;
     box-shadow: 0px 0px 2px grey;
     justify-content: space-between;
+    margin: 3px;
 
     .top-listing {
         display: flex;
@@ -122,4 +123,10 @@
     .item {
         margin: 5px;
     }
+}
+
+.orderTitle {
+    width: 200px;
+    margin: auto;
+
 }
