@@ -62,15 +62,15 @@ Farmers Marketplace has goals to create more features within its next update. Th
 
 
 
-### Sitemap
+## Sitemap
 
-![Market Sitemap](docs/Market_Sitemap.png)
+![Market Sitemap](/src/sitemap.png)
 
-### Target Audience
+## Target Audience
 
 This application is intended for those who would like to participate with purchasing produce from local growers as well as people who wish to get into the market as a farmer.
 
-### Tech Stack
+## Tech Stack
 
 Front End - CSS, HTML
 
@@ -115,6 +115,10 @@ Source Control - GitHub
 ## View Listing
 
 ![view-post](src/view-post-wireframe.png)
+
+# View Orders
+
+![orders](src/orders-wireframe.png)
 
 
 ---
