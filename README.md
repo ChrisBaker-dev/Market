@@ -1,15 +1,25 @@
 # T2A2 Marketplace Application - Christopher Baker
----
 
+
+## Deployed Marketplace:
+https://morning-hollows-06629.herokuapp.com/
+
+## Github:
+https://github.com/ChrisBaker-dev/Market
+
+## Trello:
+https://trello.com/b/sKoyITzd/marketplace#
+
+---
 # R7 - Identification of the problem you are trying to solve by building this particular marketplace app.
 
 
+Large chain grocery stores create an easy and affordable way for people obtain produce but has created a market that encourages large scale farming practices which has impacted the environment and quality of food being bought.
 
 The Farmers Marketplace application is solving two key problems:
 1. It provides a place for people to purchase quality produce from local farmers to combat mass farming techniques.
 2. It provides a place for people to earn income by growing produce at home.
 
-Large chain grocery stores create an easy and affordable way for people obtain produce but has created a market that encourages large scale farming and 
 
 ---
 # R8 - Why is it a problem that needs solving?
@@ -18,7 +28,7 @@ Large chain grocery stores create an easy and affordable way for people obtain p
 Due to the need for a grocery store to have their food on a shelf for a number of days, their produce is often picked prior to being fully ripe and stored at temperatures to preserve shelf life for days on end. By connecting users with their local gardeners/farmers they will not only receive a higher quality product, they will also find a lot more variety in produce than what is offered at a local grocer. 
 
 Additional problem this application looks to solve is the amount of environmental impact industrialized has on the environment. This application aims to 
-dampen the environmental impact of large scale farming techniques by utilizing community home farmers that rotate their crops within their appropriate seasons.
+dampen the environmental impact of large scale farming techniques by utilizing community home farmers who rotate their crops within their appropriate seasons.
 
 ---
 # R9 - A link to the deployed website
@@ -31,9 +41,11 @@ https://morning-hollows-06629.herokuapp.com/
 
 https://github.com/ChrisBaker-dev/Market
 
+---
+# R11 - Description of your marketplace app (website)
 ## Purpose
 
-Connect users with local home farmers in order to deliver better produce than can be found in a grocery store
+Connect users with local home farmers in order to deliver better produce than can be found in a grocery store at a great price and reduce environmental impact of large scale farming practices in doing so.
 
 ## Functionality / Features
 
@@ -47,7 +59,7 @@ Connect users with local home farmers in order to deliver better produce than ca
 
 - Purchase listing - processes the listing for the user and seller.
 
-- Edit listing - allows for users to edit their own listings as they find necessary.
+- Edit listing - allows for users to delete a listing as needed.
 
 - View orders - this will allow a user to see their past purchases and sales.
 
@@ -57,15 +69,31 @@ Farmers Marketplace has goals to create more features within its next update. Th
 
 - User messaging - which will allow a user to connect with their local farmers on the platform prior to purchasing a product.
 
-- Profile pictures - will allow for stronger marketing for each farmer as they can upload photos of their farm and farming processes.
+- Profiles- will allow for stronger marketing for each farmer as they can upload photos of their farm and farming processes.
 
 - Stripe payment systems - for a more secure payment processing application, Stripe is planned to be used in future applications.
+
+- Updated listing editing ability
 
 
 
 ## Sitemap
 
 ![Market Sitemap](/src/sitemap.png)
+
+## Screenshots
+### Login
+![login](/src/login-screenshot.png)
+### Listings
+![listings](/src/listings-screenshot.png)
+### Orders
+![orders](/src/orders-screenshot.png)
+## Create Listing
+![create](/src/create-screenshot.png)
+### Edit Listing
+![edit](/src/edit-listings-screenshot.png)
+### View Listing
+![view](/src/view-listing-screenshot.png)
 
 ## Target Audience
 
@@ -247,7 +275,7 @@ Active storage handles image uploads for listings.
 # R20 - Describe the way tasks are allocated and tracked in your project
 
 
-This application made use of a Trello board in order to track user stories, features and tasks to be completed. The Trello board is broken up into 6 columns: Key, Backlog, To Do, In Progress, Testing and Completed. All user stories go into the backlog and receive tags to describe their importance and how long they will take. Once it is decided that a storyt will be implemented, the story will move to To Do, then In Progress when work has begun. These features are then tested and once they pass, they can be moved to completion.
+This application made use of a Trello board in order to track user stories, features and tasks to be completed. The Trello board is broken up into 6 columns: Key, Backlog, To Do, In Progress, Testing and Completed. All user stories go into the backlog and receive tags to describe their importance and how long they will take. Once it is decided that a story will be implemented, the story will move to To Do, then In Progress when work has begun. These features are then tested and once they pass, they can be moved to completion.
 
 Deadlines for MVP Stories:
 
