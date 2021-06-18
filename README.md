@@ -79,21 +79,21 @@ Farmers Marketplace has goals to create more features within its next update. Th
 
 ## Sitemap
 
-![Market Sitemap](/src/sitemap.png)
+![Market Sitemap](/docs/sitemap.png)
 
 ## Screenshots
 ### Login
-![login](/src/login-screenshot.png)
+![login](docs/login-screenshot.png)
 ### Listings
-![listings](/src/listings-screenshot.png)
+![listings](docs/listings-screenshot.png)
 ### Orders
-![orders](/src/orders-screenshot.png)
+![orders](docs/orders-screenshot.png)
 ## Create Listing
-![create](/src/create-screenshot.png)
+![create](/docs/create-screenshot.png)
 ### Edit Listing
-![edit](/src/edit-listings-screenshot.png)
+![edit](/docs/edit-listings-screenshot.png)
 ### View Listing
-![view](/src/view-listing-screenshot.png)
+![view](/docs/view-listing-screenshot.png)
 
 ## Target Audience
 
@@ -131,29 +131,29 @@ Source Control - GitHub
 
 
 ## Sign up
-![sign-up](src/sign-up-wireframe.png)
+![sign-up](docs/sign-up-wireframe.png)
 
 ## Listings - index
 
-![listings-index](src/listings-wireframe.png)
+![listings-index](docs/listings-wireframe.png)
 
 ## Create Listing 
 
-![create-listing](src/create-post-wireframe.png)
+![create-listing](docs/create-post-wireframe.png)
 
 ## View Listing
 
-![view-post](src/view-post-wireframe.png)
+![view-post](docs/view-post-wireframe.png)
 
 # View Orders
 
-![orders](src/orders-wireframe.png)
+![orders](docs/orders-wireframe.png)
 
 
 ---
 # R14 - ERD
 
-![erd](/src/erd.png)
+![erd](/docs/erd.png)
 
 
 ---
@@ -250,26 +250,26 @@ This can be shown by looking at the ERD from R14 in which the listings model obt
 # R19 - Provide your database schema design
 
 ## Users schema
-![user-model](src/users-model.png)
+![user-model](docs/users-model.png)
 The Ruby gem Devise was used in order to generate the Users model and schema. This schema allows for users to provide and email and password and handles encrypting the password as well as adding a password reset token to the table.
 
 ## Listings schema
-![listings-model](src/listings-model.png)
+![listings-model](docs/listings-model.png)
 The listing model provides a user with all information in order to create a listing on the application.
 
 ## Orders schema
-![orders-model](src/orders-model.png)
+![orders-model](docs/orders-model.png)
 The orders model stores the user id's and listing id's in order to create a page for users to view their own past purchases.
 
 ## Active Storage schemas
-![acitve-storage-blob](src/active-storage-blobs.png)
+![acitve-storage-blob](docs/active-storage-blobs.png)
 
-![active-storage-attachements](src/active-storage-attachments.png)
+![active-storage-attachements](docs/active-storage-attachments.png)
 
 Active storage handles image uploads for listings. 
 
 ## Foreign Keys
-![foreign-keys](src/foreign-keys.png)
+![foreign-keys](docs/foreign-keys.png)
 
 ---
 # R20 - Describe the way tasks are allocated and tracked in your project
