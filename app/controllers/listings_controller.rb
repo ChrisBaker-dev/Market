@@ -2,7 +2,6 @@ class ListingsController < ApplicationController
   ## Authenticate user before any action
   before_action :authenticate_user!
   before_action :get_listing, only: [:update, :show, :destroy, :edit, :buy]
-  # before_action :check_auth
 
   def index
     # Grab all listings that dont belong to the current user and 
@@ -13,7 +12,6 @@ class ListingsController < ApplicationController
   def new
 
     @listing = Listing.new
-    # @produce = Produce.order(:name)
   end
 
   def update; end
@@ -39,7 +37,6 @@ class ListingsController < ApplicationController
         flash.now[:alert] = @listing.errors.full_messages
         render 'new'
     end
-    # render action: 'index'
   end
 
   def destroy
@@ -51,11 +48,8 @@ class ListingsController < ApplicationController
   end
 
   def buy
-    @listing.decrement(:qty, 1)
-    @listing.save!
-    Order.create(user_id: current_user.id, listing_id: @listing.id).save
-
-
+    Listing.decrease_qty(@listing) # Lower quantity of listing by one
+    Order.create(user_id: current_user.id, listing_id: @listing.id).save # Create Order entry
     redirect_to listings_path
   end
 

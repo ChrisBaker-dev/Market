@@ -5,4 +5,11 @@ class Listing < ApplicationRecord
 
   has_one_attached :image
   has_many :orders
+
+  # Lower listing quantity by one
+  def self.decrease_qty(listing)
+    listing.decrement(:qty, 1)
+    listing.save
+
+  end
 end
