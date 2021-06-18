@@ -1,6 +1,3 @@
-<p class='create-listing'></p><%= link_to 'Create Listing', new_listing_path %></p>
-<p><%= link_to 'View Orders', orders_path %></p>
-<p><%= link_to 'Edit Listings', posts_path %></p>
 <div class='layout'>
     <% @listings.each do |listing|%>
         <% if current_user.id != listing.user_id %>

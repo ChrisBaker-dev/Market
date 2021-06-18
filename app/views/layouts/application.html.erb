@@ -14,10 +14,13 @@
   <header class='main'>
       <h1>Farmers Marketplace</h1>
       <nav>
-        <%= link_to 'Home', listings_path %>
         
-        <span>
-        <% if user_signed_in? %>
+        <span class='topNav'>
+          <p><%= link_to 'Home', listings_path %> | </p>
+          <% if user_signed_in? %>
+          <p>  <%= link_to 'Create Listing', new_listing_path %> | </p>
+          <p> <%= link_to 'View Orders', orders_path %> | </p>
+          <p> <%= link_to 'Edit Listings', posts_path %></p>
           <%= current_user.email %>
           |
           <%= link_to "Logout", destroy_user_session_path, method: :delete %>

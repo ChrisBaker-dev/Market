@@ -102,3 +102,24 @@
     }
 
 }
+.topNav {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    margin-left: 25px;
+    width: 400px;
+    height: 600px;
+}
+
+.orders {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+
+    .item {
+        margin: 5px;
+    }
+}
