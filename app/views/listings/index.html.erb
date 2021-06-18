@@ -5,7 +5,7 @@
     <% @listings.each do |listing|%>
         <% if current_user.id != listing.user_id %>
         <div class='listing'>
-            <div class='top-listing'><p><%= listing.title %></p><p><%= listing.price%></p></div>
+            <div class='top-listing'><p><%= listing.title %></p><p>$<%= listing.price%></p></div>
                 <p class='listing-img'><%= cl_image_tag listing.image.key, crop: :scale, width: 200, height: 120%></p>
                 <p class='qty'>Available Stock: <%= listing.qty %></p>
                 <p class='description'><%= listing.description %></p>
